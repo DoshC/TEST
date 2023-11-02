@@ -1,0 +1,18 @@
+.table-cell {
+    position: relative;
+}
+.table-cell:hover::after {
+    content: attr(title);
+    position: absolute;
+    top: -30px;
+    left: 0;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    padding: 5px;
+    border-radius: 5px;
+    white-space: nowrap;
+}
+
+body{
+    background-color:#74279b;
+}
