@@ -7,13 +7,37 @@
     <!-- Agrega enlaces a los archivos CSS de Bootstrap -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/style.css">
+    <style>
+        .table-cell {
+            position: relative;
+            background-color: #74279b; /* Fondo de las celdas normales */
+        }
+        .table-cell:hover::after {
+            content: attr(title);
+            position: absolute;
+            top: -30px;
+            left: 0;
+            background: rgba(0, 0, 0, 0.8);
+            color: #fff;
+            padding: 5px;
+            border-radius: 5px;
+            white-space: nowrap;
+        }
+        table {
+            background-color: #74279b; /* Fondo de la tabla */
+        }
+        .bg.black {
+            background-color: #000; /* Fondo negro para las celdas de encabezado con la clase "bg black" */
+            color: #fff; /* Color del texto en las celdas de encabezado negras */
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <h1 class="text-white">Tabla 8x8 con Información Emergente</h1>
         <div class="table-responsive">
             <table class="table table-bordered">
-                <head>
+                <thead>
                     <tr>
                         <th>#</th>
                         <th class="bg-dark text-white">Columna 1</th>
@@ -24,8 +48,8 @@
                         <th class="bg-dark text-white">Columna 6</th>
                         <th class="bg-dark text-white">Columna 7</th>
                     </tr>
-                </head>
-                <body>
+                </thead>
+                <tbody>
                     <tr>
                         <th scope='row'>1</th>
                         <td class="table-cell bg-white" title="Información de la celda 1-1">Fila 1, Col 1</td>
@@ -40,43 +64,14 @@
                         <th scope='row'>2</th>
                         <td class="table-cell bg-white" title="Información de la celda 2-1">Fila 2, Col 1</td>
                         <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 2, Col 2</td>
-                        
-                        
-                        <!-- Otras celdas aquí -->
-                    </tr>
-                    <tr>
-                        <th scope='row'>3</th>
-                        <td class="table-cell bg-white" title="Información de la celda 2-1">Fila 3, Col 1</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 3, Col 2</td>
-                        
-                        
-                        <!-- Otras celdas aquí -->
-                    </tr>
-                    <tr>
-                        <th scope='row'>4</th>
-                        <td class="table-cell bg-white" title="Información de la celda 2-1">Fila 4, Col 1</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        <td class="table-cell bg-white" title="Información de la celda 2-2">Fila 4, Col 2</td>
-                        
-                        
-                        <!-- Otras celdas aquí -->
+                        <td class="table-cell bg-white" title="Información de la celda 2-3">Fila 2, Col 3</td>
+                        <td class="table-cell bg-white" title="Información de la celda 2-4">Fila 2, Col 4</td>
+                        <td class="table-cell bg-white" title="Información de la celda 2-5">Fila 2, Col 5</td>
+                        <td class="table-cell bg-white" title="Información de la celda 2-6">Fila 2, Col 6</td>
+                        <td class="table-cell bg-white" title="Información de la celda 2-7">Fila 2, Col 7</td>
                     </tr>
                     <!-- Repite las filas y celdas para completar la tabla 8x8 -->
-                </body>
+                </tbody>
             </table>
         </div>
     </div>
